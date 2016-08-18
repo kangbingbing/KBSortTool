@@ -24,10 +24,9 @@
     [super viewDidLoad];
 
     NSArray *array = @[@"阿布",@"阿西",@"aaa",@"八书",@"额额",@"大望路",@"故宫",@"广告",@"国家图书馆",@"国贸",@"guomao",@"欢乐谷",@"hujiaou",@"机器人",@"建国门",@"焦作",@"君子",@"李冰冰",@"李军",@"王一",@"天安门",@"太行山",@"双井",@"李四",@"永安里",@"73273",@" abcde"];
-
-
-    self.dataDic = [KBSortTool sortWithDataArray:array andPropertyName:@"name"];
-    
+    // 数据源
+    self.dataDic = [KBSortTool sortWithDataArray:array andPropertyName:nil];
+    // 组头
     self.indexArray = [KBSortTool sortFirstStrWithArray:self.dataDic.allKeys];
     
     

@@ -11,7 +11,7 @@
 
 @implementation KBSortTool
 
-+ (NSMutableDictionary *)sortWithDataArray:(NSArray *)dataArray andPropertyName:(NSString *)name{
++ (NSMutableDictionary *)sortWithDataArray:(NSArray *)dataArray andPropertyName:(nullable NSString *)name{
     // 结果字典
     NSMutableDictionary *resultDict = [NSMutableDictionary dictionaryWithCapacity:10];
     

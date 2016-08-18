@@ -29,10 +29,11 @@
     [super viewDidLoad];
     
     NSString *path = [[NSBundle mainBundle]pathForResource:@"friends.plist" ofType:nil];
+    // 模型数组
     self.netArray = [KBModel mj_objectArrayWithFile:path];
-    
+    // 数据源
     self.dataDic = [KBSortTool sortWithDataArray:_netArray andPropertyName:@"name"];
-    
+    // 所有 key 组头
     self.indexArray = [KBSortTool sortFirstStrWithArray:self.dataDic.allKeys];
     
     
@@ -68,8 +69,7 @@
     KBModel *model = value[indexPath.row];
     cell.textLabel.text = model.name;
     cell.detailTextLabel.text = model.pic;
-    
-    NSLog(@"%@",model.name);
+
     
     return cell;
 }
